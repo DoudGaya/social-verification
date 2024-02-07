@@ -30,8 +30,6 @@ const formSchema = z.object({
   }),
 })
 
-
-
 export function RegisterForm( {currentAuth}: any ) {
 
   const [serverError, setServerError] = useState('')

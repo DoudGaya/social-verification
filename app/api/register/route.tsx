@@ -11,9 +11,6 @@ export const POST = async (req: any) => {
         await connectMongoDB()
         const userInfo = await User.create({fullName, email, password: hashedPassword})
 
-        console.log(userInfo)
-
-
         return NextResponse.json({ message: "Account created successfully"}, {status: 201})
         
     } catch (error) {

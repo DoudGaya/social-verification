@@ -1,33 +1,63 @@
+"use client"
+import { DashboardNavigation } from '@/components/ui/DashboardNavigation'
 import React from 'react'
-import Link from 'next/link'
-import { DarkButton } from '@/components/DarkButton'
+import { twitterCards } from '@/lib/utils'
+
+
+
+import { BsTwitterX } from 'react-icons/bs'
+import { BsInstagram } from 'react-icons/bs'
+
+import {
+    Menubar,
+    MenubarContent,
+    MenubarItem,
+    MenubarMenu,
+    MenubarSeparator,
+    MenubarShortcut,
+    MenubarTrigger,
+  } from "@/components/ui/menubar"
+import { TwitterCard } from '@/components/dashboard/TwitterCard'
+
+
+
+
 
 const page = () => {
   return (
     <div>
-        <div className=" max-w-6xl mx-auto py-4 flex justify-between items-center">
-            <ul className=' flex space-x-4'>
-                <li>
-                    <Link href={'/'} className=' text-blue-500 font-semibold text-lg'>
-                        Home
-                    </Link>
-                </li>
-                <li>
-                    <Link href={''} className='font-semibold text-lg'>
-                        Verifications
-                    </Link>
-                </li>
-                <li>
-                    <Link href={''} className='font-semibold text-lg'>
-                        Posts
-                    </Link>
-                </li>
-            </ul>
-
-            <div className=" flex space-x-4 items-center ">
-                <DarkButton />
-                <div className=" rounded-full h-[40px] w-[40px] bg-green-200"></div>
+        <DashboardNavigation />
+        <div className=" flex flex-col w-full">
+            <div className=" mx-auto">
+            <Menubar className=''> 
+            <MenubarMenu>
+                <MenubarTrigger className=''>
+                    <div className=" font-semibold">Create Account</div>
+                </MenubarTrigger>
+                <MenubarContent>
+                <MenubarItem>
+                    Instagram <MenubarShortcut> <BsInstagram /> </MenubarShortcut>
+                </MenubarItem>
+                <MenubarItem>
+                    Twitter <MenubarShortcut><BsTwitterX /> </MenubarShortcut>
+                </MenubarItem>
+                </MenubarContent>
+            </MenubarMenu>
+            <MenubarMenu>
+                <MenubarTrigger>
+                    <div className=" font-semibold">Create Posts</div>
+                </MenubarTrigger>
+            </MenubarMenu>
+            </Menubar>
             </div>
+
+        </div>
+        <div className=" w-full border-b my-4 max-w-7xl mx-auto"></div>
+        <div className=" grid grid-cols-4 gap-6 max-w-7xl mx-auto">
+           {
+            // @ts-ignore
+            twitterCards.map((twitterCard: TwitterCard) => <TwitterCard twitterCard={twitterCard} />)
+           }
         </div>
     </div>
   )

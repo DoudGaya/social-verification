@@ -10,7 +10,7 @@ import {
     DialogTitle,
     DialogTrigger,
   } from "@/components/ui/dialog"
-  import { RegisterForm } from "@/components/RegisterForm";
+  import { RegisterForm } from "@/app/RegisterForm";
   import { LoginForm } from './LoginForm';
 
 
