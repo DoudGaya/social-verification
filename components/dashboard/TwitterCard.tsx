@@ -3,6 +3,7 @@ import Image from 'next/image'
 import avatar from "@/app/img/avatar.jpg"
 import twitterBanner from "@/app/img/twitter-banner.jpg"
 import { Button } from '../ui/button'
+import { TwitterCardType } from '@/typings'
 
 
 import {
@@ -18,7 +19,7 @@ import {
 import { TwitterProfile } from './TwitterProfile'
 
 
-export const TwitterCard = ({ twitterCard }: {twitterCard: TwitterCard}) => {
+export const TwitterCard = ({ twitterCard }: {twitterCard: TwitterCardType }) => {
   return (
     <>
     <div className="rounded-lg border ">
