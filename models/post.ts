@@ -6,6 +6,10 @@ const postSchema = new Schema({
         type: String,
         required: true
     },
+    image: {
+        type: String,
+        required: true
+    },
     username: {
         type: String,
         required: true
@@ -15,7 +19,6 @@ const postSchema = new Schema({
         required: true
     }
 })
-
 
 const Post = models.Post || mongoose.model("Post", postSchema)
 export default Post

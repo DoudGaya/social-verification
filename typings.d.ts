@@ -1,16 +1,26 @@
-interface TwitterCard {
+import { ReactNode } from "react"
+
+interface TwitterCardType {
     name: string
     username: string
-    followers: number
-    following: number
+    followers: string
+    following: string
     profileImage: Image
     banner: Image
     location: string
     url: string
+    dateJoined: string
     bio:string
     occupation: string
     verification: string
     pinnedPost: Post
+    numberOfPosts: number
+}
+
+interface DashboardUrls {
+    id: number
+    name: string
+    icon: ReactNode
 }
 
 interface Image {
@@ -22,7 +32,7 @@ interface Image {
 
 interface Post {
     body: string
-    image: ImageData
+    image: Image
     likes: string
     comments: string
     retweet: string

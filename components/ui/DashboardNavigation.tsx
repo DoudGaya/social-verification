@@ -25,10 +25,6 @@ import {
     NavigationMenuTrigger,
     NavigationMenuViewport,
   } from "@/components/ui/navigation-menu"
-  
-  
-
-
 
 export const DashboardNavigation = () => {
 
@@ -37,8 +33,8 @@ export const DashboardNavigation = () => {
     <div className=''>
         <div className="">
         <div className="">
-        <div className=" max-w-6xl mx-auto py-4 flex justify-between items-center">
-            <ul className=' flex space-x-4'>
+        <div className=" max-w-7xl mx-auto py-2 flex justify-between px-2 items-center">
+            <ul className=' flex space-x-4 items-center '>
                 <li>
                     <Link href={''} className='font-semibold border-b-2 border-blue-500 text-lg'>
                         <p>Accounts</p>
