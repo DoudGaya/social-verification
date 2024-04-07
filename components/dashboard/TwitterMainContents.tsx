@@ -102,7 +102,7 @@ export const TwitterMainContents = ( { profileData}: { profileData: TwitterCardT
 
       <div className=" w-full border-b-2 mt-4 items-center px-8 grid grid-cols-5">
        {
-        profileNav.map((nav) => <Link className={`flex justify-center text-center font-semibold text-gray-600 hover:bg-gray-200 rounded-sm`} href={''}> <p className={` border-b-4 py-3 ${nav.toLowerCase() === 'posts' ? 'border-blue-500' : 'border-transparent'} `}> {nav}</p> </Link>)
+        profileNav.map((nav) => <Link key={nav} className={`flex justify-center text-center font-semibold text-gray-600 hover:bg-gray-200 rounded-sm`} href={ nav }> <p className={` border-b-4 py-3 ${nav.toLowerCase() === 'posts' ? 'border-blue-500' : 'border-transparent'} `}> {nav}</p> </Link>)
        }
       </div>
       <div className=" px-6 py-3">

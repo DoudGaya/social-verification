@@ -14,18 +14,25 @@ import instagram from '@/app/img/instagram.png'
 import twitter from '@/app/img/twitter.png'
 
 
-const socialComponents = [ {
-  img: facebook,
-  name: 'Facebook'
-}
-  , {
+const socialComponents = [ 
+  {
+    id: 1,
+    img: facebook,
+    name: 'Facebook'
+  }
+
+,{
+  id: 2,
     img: instagram,
     name: 'Instagram'
+  }, 
 
-  }, {
+  {
+    id: 3,
     img: twitter,
     name: 'Twitter'
-  }]
+  }
+]
 
 export default async function Home() {
 
@@ -62,7 +69,7 @@ export default async function Home() {
         </p>
        <div className=" flex flex-row py-6 h-full w-full bg-blue-400">
         {
-          socialComponents.map((item) => <Image src={item.img} className=" h-20 rounded-lg object-cover object-center" key={item.name} alt="Social verification " /> )
+          socialComponents.map((item) => <Image src={item.img} className=" h-20 rounded-lg object-cover object-center" key={item.id} alt="Social verification " /> )
         }
        </div>
        </div>
