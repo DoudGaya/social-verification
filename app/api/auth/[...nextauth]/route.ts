@@ -5,12 +5,11 @@ import NextAuth from "next-auth/next";
 import bcrypt from "bcryptjs"
 import  CredentialsProvider from "next-auth/providers/credentials";
 
-export const authOptions = {
+ const authOptions = {
     providers: [
         CredentialsProvider({
             name: "credentials",
             credentials: {},
-            // @ts-ignore
             async authorize( credentials) {
                 // @ts-ignore
                 const {email, password} = credentials
@@ -39,5 +38,7 @@ export const authOptions = {
 }
 // @ts-ignore
 const handler = NextAuth(authOptions)
+
+export default authOptions
 
 export {handler as GET, handler as POST}
