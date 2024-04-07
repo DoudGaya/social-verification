@@ -45,7 +45,7 @@ return (
             <p> { username} </p>
           </div>
        </div>
-        <div className="">
+        <div className=""> 
           <BsThreeDots className=' h-8 w-8' />
         </div>
       </div>
