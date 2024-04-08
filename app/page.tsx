@@ -6,8 +6,8 @@ import bannerImageDark from '@/app/img/banner-image-dark.svg'
 import { AuthDialog } from "@/app/AuthDialog";
 import { getServerSession } from "next-auth"
 import { redirect } from "next/navigation"
-import  { authOptions } from "./api/auth/[...nextauth]/route"
-
+// import  authOptions from "./api/auth/[...nextauth]/route"
+import { authOptions } from "@/lib/config/auth/authOptions";
 
 import facebook from '@/app/img/facebook.png'
 import instagram from '@/app/img/instagram.png'
