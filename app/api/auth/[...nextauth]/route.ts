@@ -36,7 +36,7 @@ import  CredentialsProvider from "next-auth/providers/credentials";
     }
 }
 
-
+// @ts-ignore
 const handler = NextAuth(authOptions)
 
 
