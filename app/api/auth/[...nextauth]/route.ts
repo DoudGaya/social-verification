@@ -35,9 +35,9 @@ import  CredentialsProvider from "next-auth/providers/credentials";
         signIn: "/"
     }
 }
-// @ts-ignore
+
+
 const handler = NextAuth(authOptions)
 
-export default authOptions
 
-export {handler as GET, handler as POST}
+export {handler as GET, handler as POST, authOptions}
